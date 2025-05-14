@@ -1,6 +1,6 @@
 ## SubModular Implementation
 
-```mermaidjs
+```mermaid
 ---
 config:
   layout: dagre
@@ -25,11 +25,5 @@ flowchart TD
     D -- loads --> A
     E -- implements --> A
     F -- implements --> A
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style C fill:#bfb,stroke:#333,stroke-width:2px
-    style D fill:#bfb,stroke:#333,stroke-width:2px
-    style E fill:#fbb,stroke:#333,stroke-width:2px
-    style F fill:#fbb,stroke:#333,stroke-width:2px
 
 ```
