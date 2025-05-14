@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.annotation.Keep
 import com.appsamurai.storyly_core.WidgetFactory
-import java.util.ServiceLoader
 
 @Keep
 public class STRPlacement @JvmOverloads constructor(
@@ -19,7 +18,7 @@ public class STRPlacement @JvmOverloads constructor(
     }
 
     public fun initialize() {
-        STRWidgetFactoryRegisterer.widgetList?.map { factory ->
+        WidgetRegisterer.register.map { (key, factory) ->
             initWidget(factory)
         }
     }

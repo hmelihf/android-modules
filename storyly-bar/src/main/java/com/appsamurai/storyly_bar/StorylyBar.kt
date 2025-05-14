@@ -7,9 +7,12 @@ import com.appsamurai.storyly_core.STRCoreData
 import com.appsamurai.storyly_core.STRCoreListener
 import com.appsamurai.storyly_core.STRWidget
 import com.appsamurai.storyly_core.WidgetFactory
+import com.appsamurai.storyly_core.WidgetType
 
 @Keep
 public class STRBarViewFactory: WidgetFactory {
+    override fun getType() = WidgetType.Bar
+
     override fun create(context: Context): STRWidget {
         return STRBarView(context)
     }

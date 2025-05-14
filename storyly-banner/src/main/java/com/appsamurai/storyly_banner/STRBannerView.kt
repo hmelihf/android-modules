@@ -7,10 +7,13 @@ import com.appsamurai.storyly_core.STRCoreData
 import com.appsamurai.storyly_core.STRCoreListener
 import com.appsamurai.storyly_core.STRWidget
 import com.appsamurai.storyly_core.WidgetFactory
+import com.appsamurai.storyly_core.WidgetType
 
 
 @Keep
 public class STRBannerViewFactory: WidgetFactory {
+    override fun getType() = WidgetType.Banner
+
     override fun create(context: Context): STRWidget {
         return STRBannerView(context)
     }
