@@ -25,7 +25,6 @@ public class STRBarView(
     }
 
     override fun load() {
-        super.load()
         setBackgroundColor(Color.BLUE)
     }
 }

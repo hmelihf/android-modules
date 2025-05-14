@@ -6,24 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.annotation.Keep
-import com.appsamurai.storyly_core.STRClassRegisterer
 import com.appsamurai.storyly_core.WidgetFactory
+import java.util.ServiceLoader
 
 @Keep
 public class STRPlacement @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
 ) : LinearLayout(context, attrs) {
-    private val widgetList: List<WidgetFactory> = listOf(
-        STRClassRegisterer().create("com.appsamurai.storyly_bar.STRBarViewFactory"),
-        STRClassRegisterer().create("com.appsamurai.storyly_banner.STRBannerViewFactory"),
-    ).filterNotNull()
 
     init {
         orientation = VERTICAL
     }
 
     public fun initialize() {
-        widgetList.forEach { factory ->
+        STRWidgetFactoryRegisterer.widgetList?.map { factory ->
             initWidget(factory)
         }
     }
