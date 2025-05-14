@@ -1,6 +1,6 @@
 ## SubModular Implementation
 
-```mermaidjs
+```mermaid
 ---
 config:
   layout: dagre
