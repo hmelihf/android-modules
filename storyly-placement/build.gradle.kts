@@ -42,6 +42,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(project(":storyly-bar"))
-//    implementation(project(":storyly-banner"))
+    implementation(project(":storyly-banner"))
     implementation(project(":storyly-core"))
 }
