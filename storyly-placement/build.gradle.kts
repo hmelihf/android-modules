@@ -4,14 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.appsamurai.mylibrary"
+    namespace = "com.appsamurai.storyly_placement"
     compileSdk = 35
 
     defaultConfig {
         minSdk = 23
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -36,10 +33,6 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(project(":storyly-bar"))
     implementation(project(":storyly-banner"))
